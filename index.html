@@ -161,6 +161,50 @@
 <!-- End paper abstract -->
 
 
+<!-- Methods Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Navigating with imaginations</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our approach leverages text-to-image diffusion models to generate visual representations of sub-goals implied by navigation instructions. These imaginations act as landmark cues for VLN agents, helping them navigate more effectively.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image with Caption -->
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <figure class="image">
+          <img src="static/images/method.png" alt="Method Overview">
+          <figcaption class="has-text-centered"><i>An overview of our approach. (Left) Imaginations generated using valid sub-instructions from an instruction as determined by
+            our filtering scheme are first passed to a pre-trained ViT to obtain feature vectors. A type embedding tIm for imagination modality is
+            then added to the features which are encoded using a 3 layer MLP to obtain imagination embeddings hi. (Right) To integrate imagination
+            modality to a VLN agent, the imagination embeddings hi are concatenated with instruction embeddings ti that are encoded using a text
+            encoder fT (W). The concatenated imagination-text embeddings are passed to the VLN agent’s cross-modal encoder fX along with visual
+            embeddings to predict a distribution over the agent’s action space.</i></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-justified">
+      <div class="column is-four-fifths">
+        <p>
+          The imaginations are extracted from landmark references in segmented instructions. They are provided to VLN agents as an additional modality, serving as visual cues. Furthermore, an auxiliary loss encourages linking imaginations with their corresponding referring expressions, improving the agent's spatial awareness.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
