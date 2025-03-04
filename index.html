@@ -290,10 +290,10 @@
       </tr>
       <tr>
         <td style="text-align: center; vertical-align: middle; width: 20%">DUET-Imagine (Ours)</td>
-        <td style="text-align: center; vertical-align: middle; width: 10%">48.28</td>
-        <td style="text-align: center; vertical-align: middle; width: 10%">33.76</td>
-        <td style="text-align: center; vertical-align: middle; width: 10%">32.97</td>
-        <td style="text-align: center; vertical-align: middle; width: 10%">23.25</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%"><b></b>48.28</b></td>
+        <td style="text-align: center; vertical-align: middle; width: 10%"><b></b>33.76</b></td>
+        <td style="text-align: center; vertical-align: middle; width: 10%"><b></b>32.97</b></td>
+        <td style="text-align: center; vertical-align: middle; width: 10%"><b></b>23.25</b></td>
       </tr>
     </table>
     </center>
@@ -308,67 +308,39 @@
 
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
+<!-- Attention plots Section -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative Visualizations</h2>
+        <!-- <div class="content has-text-justified">
+          <p>
+            Our approach leverages text-to-image diffusion models to generate visual representations of sub-goals implied by navigation instructions. These imaginations act as landmark cues for VLN agents, helping them navigate more effectively.
+          </p>
+        </div> -->
       </div>
     </div>
-  </div>
-</section>
-<!-- End youtube video -->
+
+    <!-- Image with Caption -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <figure class="image">
+          <img src="static/images/attention_visualization.png" alt="Attention viz" 
+               style="display: block; max-width: 100%; height: auto; object-fit: contain; margin: 0 auto; border-radius: 8px;">
+        </figure>
+        <h2 class="subtitle has-text-justified" style="font-size: 1rem; margin-top: 10px;">
+          <i>Qualitative examples illustrating the role of imaginations as pivots between language and observation images. Each row contains one example. The first column contains sub-instruction from a random instruction from R2R, the second column contains the imagination generated using the sub-instruction. The third and fourth columns show highest attended language tokens and observation images from an attention head in HAMT’s cross-modal transformer at a time step the associated observations are first visible. In the second example (row
+          2), the sub-instruction contains references to “unicycle” which are captured in the imagination along with neighboring nouns “easel” and
+          “door”. We observe that in a head where top attending language tokens to the imagination query are references to nouns associated with
+          the sub-instruction, its top attended observations to the imagination query are images of the same concept (“unicycle”). In this example,
+          the imagination of a unicycle is being used to associate language tokens belonging to “unicycle” to observations of unicycle hinting at the
+          utility of imaginations in navigation.</i>
+        </h2>
+      </div>
+    </div>
+
 
 
 
