@@ -206,7 +206,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
     <h2 class="title is-3">Results</h2>
-    <h2 class="title is-5">Test Leaderboard Performance</h2>
+    <!-- <h2 class="title is-5">Test Leaderboard Performance</h2> -->
     <center>
     <table border="1" >
   <tr>
@@ -259,33 +259,45 @@
 <p>Comparison of our approach with selected prior work on the Room-to-Room (R2R) dataset. Adding our visual imagination approach to HAMT and DUET base models leads to improved success rate (SR) and
   success weighted by inverse path length (SPL).</p>
 
-          <!-- New Table -->
-          <h2 class="title is-5">Additional Results</h2>
-          <center>
-            <table border="1">
-              <tr>
-                <th style="text-align: center; vertical-align: middle;">Metric 1</th>
-                <th style="text-align: center; vertical-align: middle;">Metric 2</th>
-                <th style="text-align: center; vertical-align: middle;">Metric 3</th>
-                <th style="text-align: center; vertical-align: middle;">Metric 4</th>
-                <th style="text-align: center; vertical-align: middle;">Metric 5</th>
-              </tr>
-              <tr>
-                <td style="text-align: center; vertical-align: middle;">Value 1</td>
-                <td style="text-align: center; vertical-align: middle;">Value 2</td>
-                <td style="text-align: center; vertical-align: middle;">Value 3</td>
-                <td style="text-align: center; vertical-align: middle;">Value 4</td>
-                <td style="text-align: center; vertical-align: middle;">Value 5</td>
-              </tr>
-              <tr>
-                <td style="text-align: center; vertical-align: middle;">Value 6</td>
-                <td style="text-align: center; vertical-align: middle;">Value 7</td>
-                <td style="text-align: center; vertical-align: middle;">Value 8</td>
-                <td style="text-align: center; vertical-align: middle;">Value 9</td>
-                <td style="text-align: center; vertical-align: middle;">Value 10</td>
-              </tr>
-            </table>
-          </center>
+
+          <!-- REVERIE Table -->
+          <!-- <h2 class="title is-5">Additional Results</h2> -->
+  <center>
+    <table border="1">
+      <tr>
+        <th style="text-align: center; vertical-align: middle;" colspan="1">Model</th>
+        <th style="text-align: center; vertical-align: middle;" colspan="4">REVERIE</th>
+      </tr>
+      <tr>
+        <td style="text-align: center; vertical-align: middle;" colspan="1"></td>
+        <td style="text-align: center; vertical-align: middle;" colspan="4">Val Unseen</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td style="text-align: center; vertical-align: middle;">SR</td>
+        <td style="text-align: center; vertical-align: middle;">SPL</td>
+        <td style="text-align: center; vertical-align: middle;">RGS</td>
+        <td style="text-align: center; vertical-align: middle;">RGSPL</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; vertical-align: middle; width: 20%"><a href="https://arxiv.org/abs/2202.11742">DUET</a></td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">46.98</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">33.73</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">32.15</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">23.03</td>
+      </tr>
+      <tr>
+        <td style="text-align: center; vertical-align: middle; width: 20%">DUET-Imagine (Ours)</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">48.28</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">33.76</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">32.97</td>
+        <td style="text-align: center; vertical-align: middle; width: 10%">23.25</td>
+      </tr>
+    </table>
+    </center>
+    <div class="content has-text-justified">
+      <p>Performance comparison of our approach on REVERIE with baseline. We observe improvements of our method across navigation and grounding metrics on DUET when provided coarse-grained instructions.</p>
+            
 
       </div>
     </div>
