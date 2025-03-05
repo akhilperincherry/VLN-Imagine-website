@@ -135,7 +135,7 @@
       <!-- </video> -->
       <img src="static/images/idea_illustration.png" alt="Teaser Image" style="width:100%; height:auto;">
       <h2 class="subtitle has-text-centered">
-        Illustration of visual imaginations. (Top) A natural language instruction specifying sub-goals pool table, kitchen, and bedroom. (Bottom) Visual imaginations of landmarks pool table, kitchen and bedroom referenced by the sub-goals in the instruction. In our work, we study if these visual imaginations generated using text-to-image models can convey navigational cues to improve performance in VLN agents. 
+        <i>Illustration of visual imaginations. (Top) A natural language instruction specifying sub-goals pool table, kitchen, and bedroom. (Bottom) Visual imaginations of landmarks pool table, kitchen and bedroom referenced by the sub-goals in the instruction. In our work, we study if these visual imaginations generated using text-to-image models can convey navigational cues to improve performance in VLN agents.</i> 
       </h2>
     </div>
   </div>
@@ -169,7 +169,7 @@
         <h2 class="title is-3">Navigating with Imaginations</h2>
         <div class="content has-text-justified">
           <p>
-            Our approach leverages text-to-image diffusion models to generate visual representations of sub-goals implied by navigation instructions. These imaginations act as landmark cues for VLN agents, helping them navigate more effectively.
+            We examine whether providing visual imagery corresponding to described landmarks improves the performance of agents following natural language navigation instructions. Consider the natural language navigation instruction presented in the figure above which asks an agent to “Go straight, take a left at the pool table to enter the kitchen. Walk to the bedroom and stop”. This instruction provides  unconditional action directives like “go straight” but also frequently conditions the given directions on visual landmarks in the scene such as the pool table, kitchen, and bedroom. We instantiate our idea using text-to-image generation models to produce imagery matching the semantics of these visual references prior to navigation. Drawing an analogy to the substantial work in cognitive science on the impact of mental imagery on task performance, we refer to these generated images as visual imaginations and study whether providing them in addition to corresponding language-based instructions can improve the performance of vision-and-language navigation agents.
           </p>
         </div>
       </div>
@@ -183,7 +183,7 @@
                style="display: block; max-width: 100%; height: auto; object-fit: contain; margin: 0 auto; border-radius: 8px;">
         </figure>
         <h2 class="subtitle has-text-justified" style="font-size: 1rem; margin-top: 10px;">
-          <i>An overview of our approach. (Left) Imaginations generated using valid sub-instructions from an instruction as determined by our filtering scheme are first passed to a pre-trained ViT to obtain feature vectors. A type embedding tIm for imagination modality is then added to the features which are encoded using a 3-layer MLP to obtain imagination embeddings hI. (Right) To integrate imagination modality into a VLN agent, the imagination embeddings hI are concatenated with instruction embeddings tI that are encoded using a text encoder fT (W). The concatenated imagination-text embeddings are passed to the VLN agent’s cross-modal encoder fX along with visual embeddings to predict a distribution over the agent’s action space.</i>
+          <i>An overview of our approach. (Left) Imaginations generated using valid sub-instructions from an instruction as determined by our filtering scheme are first passed to a pre-trained ViT to obtain feature vectors. A type embedding t<sub>Im</sub> for imagination modality is then added to the features which are encoded using a 3-layer MLP to obtain imagination embeddings h<sub>I</sub>. (Right) To integrate imagination modality into a VLN agent, the imagination embeddings h<sub>I</sub> are concatenated with instruction embeddings t<sub>I</sub> that are encoded using a text encoder f<sub>T</sub>(W). The concatenated imagination-text embeddings are passed to the VLN agent’s cross-modal encoder f<sub>X</sub> along with visual embeddings to predict a distribution over the agent’s action space.</i>
         </h2>
       </div>
     </div>
@@ -192,7 +192,13 @@
     <div class="columns is-centered has-text-justified">
       <div class="column is-four-fifths">
         <p>
-          The imaginations are extracted from landmark references in segmented instructions. They are provided to VLN agents as an additional modality, serving as visual cues. Furthermore, an auxiliary loss encourages linking imaginations with their corresponding referring expressions, improving the agent's spatial awareness.
+          We:
+          <ul>
+            <li>Develop a pipeline for generating visual imaginations from navigation instructions and synthesize the R2R-Imagine dataset to enable studying the impact of text-to-image models on VLN agents.</li>
+            <li>Propose an agent-agnostic method to incorporate visual imaginations into existing VLN agents and show improved performance for HAMT and DUET.</li>
+            <li>Show generalized performance improvements across fine-grained instructions (Room-to-Room) and coarse-grained instructions (REVERIE).</li>
+          </ul>
+          
         </p>
       </div>
     </div>
@@ -351,7 +357,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster (coming soon)</h2>
@@ -361,7 +367,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -395,7 +401,7 @@
 
 <!-- Statcounter tracking code -->
 
-<!-- Default Statcounter code for My website http://akhilperincherry.com -->
+<!-- Default Statcounter code for http://akhilperincherry.com -->
 <script type="text/javascript">
   var sc_project=13097416; 
   var sc_invisible=1; 
